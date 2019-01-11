@@ -396,8 +396,8 @@ void btsnd_hcic_ble_rand(base::Callback<void(BT_OCTET8)> cb) {
                             base::Bind(
                                 [](base::Callback<void(BT_OCTET8)> cb,
                                    uint8_t* param, uint16_t param_len) {
-                                  CHECK(param[0] == 0)
-                                      << "LE Rand return status must be zero";
+                                  // CHECK(param[0] == 0)
+                                  //    << "LE Rand return status must be zero";
                                   cb.Run(param + 1 /* skip status */);
                                 },
                                 std::move(cb)));

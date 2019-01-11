@@ -404,7 +404,7 @@ static bool supports_ble_coded_phy(void) {
 
 static bool supports_ble_extended_advertising(void) {
   CHECK(readable);
-  CHECK(ble_supported);
+  // CHECK(ble_supported);
   return HCI_LE_EXTENDED_ADVERTISING_SUPPORTED(features_ble.as_array);
 }
 
